@@ -65,6 +65,12 @@
       m.value = '';
       return false;
     };
+    socket.on('chat message', function(msg){
+      const item = document.createElement('li');
+      item.innerHTML = msg;
+      messages.appendChild(item);
+    });
+
   </script>
 </body>
 
