@@ -19,8 +19,8 @@ io.on( 'connection', function ( socket ) {
 
   client.connect();
   const query = {
-    text: 'SELECT message FROM Messages WHERE id = $1',
-    values: [1],
+    text: 'SELECT message FROM Messages',
+    
   }
   
   client.query(query, (err, res) => {
