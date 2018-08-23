@@ -28,7 +28,7 @@ io.on( 'connection', function ( socket ) {
       console.log(err.stack)
     } else {
       socket.on( 'result', function ( res ) {       
-        io.emit('result', res);
+        io.emit('result', res.rows[0]);
       } );
     }
 
