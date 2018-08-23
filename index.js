@@ -27,7 +27,9 @@ io.on( 'connection', function ( socket ) {
     if (err) {
       console.log(err.stack)
     } else {
-      io.emit('result',res);
+      socket.on( 'result', function ( res ) {       
+        io.emit('result', res);
+      } );
     }
 
     client.end();
