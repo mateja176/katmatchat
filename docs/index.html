@@ -70,6 +70,11 @@
       item.innerHTML = msg;
       messages.appendChild(item);
     });
+    socket.on('result', function(res){
+      const item = document.createElement('li');
+      item.innerHTML = res.rows[0];
+      messages.appendChild(item);
+    });
 
   </script>
 </body>
